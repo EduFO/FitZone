@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Zone - O Teu Ginásio Digital</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <button id="sidebarToggle" class="menu-toggle" aria-label="Abrir menu">☰</button>
+        <div class="logo-container">
+            <h1>Fit Zone</h1>
+        </div>
+    </header>
+
+
+    <!--Sidebar-->
+    <aside id="sidebar" class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="#home"><span class="icon">🏠</span><span>Home</span></a>
+            <a href="#servicos"><span class="icon">💪</span><span>Serviços</span></a>
+            <a href="#imc"><span class="icon">⚖️</span><span>Calcular IMC</span></a>
+            <a href="#contacto"><span class="icon">✉️</span><span>Contacto</span></a>
+            <a href="#" id="loginLink"><span class="icon">🔑</span><span>Login</span></a>
+        </nav>
+    </aside>
+
+    <!--Modal de login-->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Utilizador:</label>
+                <input type="text" id="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <!--Inicio-->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Transforma o teu corpo, transforma a tua vida</h2>
+                <p>Junta-te à nossa comunidade fitness hoje!</p>
+                <button class="cta">Começa Agora</button>
+            </div>
+        </section>
+
+        <!--Serviços-->
+        <section id="servicos" class="services">
+            <h2>Os Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="img/levantarpesos.png" alt="Musculação">
+                    <h3>Musculação</h3>
+                    <p>Equipamentos modernos e instrutores especializados</p>
+                </div>
+                <div class="service-card">
+                    <img src="img/natacao.png" alt="Aeróbica Aquática">
+                    <h3>Hidroginástica</h3>
+                    <p>Atividades de baixo impacto com excelentes resultados</p>
+                </div>
+                <div class="service-card">
+                    <img src="img/yoga.png" alt="Yoga">
+                    <h3>Yoga & Pilates</h3>
+                    <p>Equilíbrio entre o corpo e a mente</p>
+                </div>
+            </div>
+        </section>
+
+        <!--IMC-->
+        <section id="imc" class="imc-calculator">
+            <h2>Calculadora de IMC</h2>
+            <div class="calculator">
+                <label for="weight">Peso (kg):</label>
+                <input type="number" id="weight" placeholder="Ex: 70">
+                
+                <label for="height">Altura (m):</label>
+                <input type="number" id="height" placeholder="Ex: 1.75" step="0.01">
+                
+                <button id="calculateBtn">Calcular IMC</button>
+                
+                <div id="result" >Aqui aparecerão os teus resultados...</div>
+            </div>
+        </section>
+
+        <!--Video-->
+        <section class="video-section">
+            <h2>Conhece a Nossa Estrutura</h2>
+            <video controls>
+                <source src="video/video.mp4" type="video/mp4">
+                O teu navegadora não suporta este formato de vídeos.
+            </video>
+        </section>
+
+        <!--Contacto-->
+        <section id="contacto" class="contact-form">
+            <h2>Entra em Contacto</h2>
+            <form id="contactForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" required></textarea>
+                
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <!--Rodapé-->
+    <footer>
+        <div class="social-links">
+            <a href="#" aria-label="Instagram"><img src="img/Instagram_icon.png" alt="Instagram"></a>
+            <a href="#" aria-label="LinkedIn"><img src="img/LinkedIn_icon.png" alt="LinkedIn"></a>
+            <a href="#" aria-label="Email"><img src="img/Gmail_icon.png" alt="Email"></a>
+            <a href="#" aria-label="GitHub"><img src="img/github_logo.png" alt="GitHub"></a>
+        </div>
+        <p>&copy; 2025 Fit Zone. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
